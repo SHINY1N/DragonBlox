@@ -4,8 +4,6 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "ShinyGui - Dragon Blox", HidePremium = false, SaveConfig = true, ConfigFolder = "ShinyGuiConfics"})
 
-local Player = game.Players.LocalPlayer
-local char = Player.Character
 local JirenCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCMain10_JigrayArea.HumanoidRootPart.CFrame
 local FriezaCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCMain2_PurizaArea.HumanoidRootPart.CFrame
 local CoolerCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCMain3_CoolestArea.HumanoidRootPart.CFrame
@@ -93,6 +91,8 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "Jiren Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = JirenCF
   	end    
@@ -100,6 +100,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Frieza Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = FriezaCF
   	end    
@@ -107,6 +109,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Cooler Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = CoolerCF
   	end    
@@ -114,6 +118,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Androids Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = AndroidCF
   	end    
@@ -121,6 +127,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Cell Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = CellCF
   	end    
@@ -128,6 +136,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Buu Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = BuuCF
   	end    
@@ -135,6 +145,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Baby Vegeta Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = BVegetaCF
   	end    
@@ -142,6 +154,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Goku Black Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = GokuBCF
   	end    
@@ -149,6 +163,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Broly Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = BrolyCF
   	end    
@@ -156,6 +172,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Spawn",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = SpawnCF
   	end    
@@ -172,8 +190,6 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "ShinyGui - Dragon Blox", HidePremium = false, SaveConfig = true, ConfigFolder = "ShinyGuiConfics"})
 
-local Player = game.Players.LocalPlayer
-local char = Player.Character
 local DestroyerCF = game:GetService("Workspace")["World Map"]["Multiplier Zone"]["Destroyer's Island"]["Destroyer's Planet"].Platform.Part.CFrame
 local GordoCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCCrimson1.HumanoidRootPart.CFrame
 local CalciCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCCrimson2.HumanoidRootPart.CFrame
@@ -256,6 +272,8 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "Gordo Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = GordoCF
   	end    
@@ -263,6 +281,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Calci Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = CalciCF
   	end    
@@ -270,6 +290,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Truffle Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = TruffleCF
   	end    
@@ -277,6 +299,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Janemba/Nemba Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = JanembaCF
   	end    
@@ -284,6 +308,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Vegeta Ultra Ego Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
             local VegetaCF = game:GetService("Workspace").Misc.NPC.UltraTechniqueVeggyGiver.HumanoidRootPart.CFrame
       		Humrootpart.CFrame = VegetaCF
@@ -292,6 +318,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Spawn",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = spawn2CF
   	end    
@@ -299,6 +327,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Destroyer Planet Buff (80 Rebirth)",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = DestroyerCF
   	end    
@@ -314,8 +344,6 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "ShinyGui - Dragon Blox", HidePremium = false, SaveConfig = true, ConfigFolder = "ShinyGuiConfics"})
 
-local Player = game.Players.LocalPlayer
-local char = Player.Character
 local FriezaX003CF = game:GetService("Workspace").Misc.NPC.Quest.QuestNPCDroid1_PurizaX003.HumanoidRootPart.CFrame
 local CellX002CF = game:GetService("Workspace").Misc.NPC.Quest.QuestNPCDroid2_AtomX002.HumanoidRootPart.CFrame
 local BrolyX01CF = game:GetService("Workspace").Misc.NPC.Quest.QuestNPCDroid3_BrawlyX01.HumanoidRootPart.CFrame
@@ -396,6 +424,8 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "FriezaX003 Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = FriezaX003CF
   	end    
@@ -403,6 +433,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "CellX002 Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = CellX002CF
   	end    
@@ -410,6 +442,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "BrolyX01 Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = BrolyX01CF
   	end    
@@ -417,6 +451,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "JirenX Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = JirenXCF
   	end    
@@ -424,6 +460,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Goku Ultra Instinct Quest",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
             local GokuCF = game:GetService("Workspace").Misc.NPC.UltraTechniqueKarrotGiver.HumanoidRootPart.CFrame
       		Humrootpart.CFrame = GokuCF
@@ -433,6 +471,8 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Spawn",
 	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = spawn3CF
   	end    
