@@ -166,8 +166,13 @@ local Window = OrionLib:MakeWindow({Name = "ShinyGui - Dragon Blox", HidePremium
 local Player = game.Players.LocalPlayer
 local char = Player.Character
 local Humrootpart = char.HumanoidRootPart
-
-
+local DestroyerCF = game:GetService("Workspace")["World Map"]["Multiplier Zone"]["Destroyer's Island"]["Destroyer's Planet"].Platform.Part.CFrame
+local GordoCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCCrimson1.HumanoidRootPart.CFrame
+local CalciCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCCrimson2.HumanoidRootPart.CFrame
+local TruffleCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCCrimson3.HumanoidRootPart.CFrame
+local JanembaCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCCrimson4.HumanoidRootPart.CFrame
+local ElManoCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCCrimson5.HumanoidRootPart.CFrame
+local spawn2CF = game:GetService("Workspace").Misc.SpawnTP.CFrame
 
 local Tab = Window:MakeTab({
 	Name = "AutoFarm",
@@ -240,6 +245,49 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Click the Buttons to Teleport"
 })
+Tab:AddButton({
+	Name = "Gordo Quest",
+	Callback = function()
+      		Humrootpart.CFrame = GordoCF
+  	end    
+})
+Tab:AddButton({
+	Name = "Calci Quest",
+	Callback = function()
+      		Humrootpart.CFrame = CalciCF
+  	end    
+})
+Tab:AddButton({
+	Name = "Truffle Quest",
+	Callback = function()
+      		Humrootpart.CFrame = TruffleCF
+  	end    
+})
+Tab:AddButton({
+	Name = "Janemba/Nemba Quest",
+	Callback = function()
+      		Humrootpart.CFrame = JanembaCF
+  	end    
+})
+Tab:AddButton({
+	Name = "Vegeta Ultra Ego Quest",
+	Callback = function()
+            local VegetaCF = game:GetService("Workspace").Misc.NPC.UltraTechniqueVeggyGiver.HumanoidRootPart.CFrame
+      		Humrootpart.CFrame = VegetaCF
+  	end    
+})
+Tab:AddButton({
+	Name = "Spawn",
+	Callback = function()
+      		Humrootpart.CFrame = spawn2CF
+  	end    
+})
+Tab:AddButton({
+	Name = "Destroyer Planet Buff (80 Rebirth)",
+	Callback = function()
+      		Humrootpart.CFrame = DestroyerCF
+  	end    
+})
 local Tab = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://4483345998",
@@ -258,7 +306,6 @@ local FriezaX003CF = game:GetService("Workspace").Misc.NPC.Quest.QuestNPCDroid1_
 local CellX002CF = game:GetService("Workspace").Misc.NPC.Quest.QuestNPCDroid2_AtomX002.HumanoidRootPart.CFrame
 local BrolyX01CF = game:GetService("Workspace").Misc.NPC.Quest.QuestNPCDroid3_BrawlyX01.HumanoidRootPart.CFrame
 local JirenXCF = game:GetService("Workspace").Misc.NPC.Quest.QuestNPCDroid4_JigrayX.HumanoidRootPart.CFrame
-local GokuCF = game:GetService("Workspace").Misc.NPC.UltraTechniqueKarrotGiver.HumanoidRootPart.CFrame
 local spawn3CF = game:GetService("Workspace").Misc.SpawnTP.CFrame
 
 local Tab = Window:MakeTab({
@@ -359,6 +406,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Goku Ultra Instinct Quest",
 	Callback = function()
+            local GokuCF = game:GetService("Workspace").Misc.NPC.UltraTechniqueKarrotGiver.HumanoidRootPart.CFrame
       		Humrootpart.CFrame = GokuCF
   	end    
 })
