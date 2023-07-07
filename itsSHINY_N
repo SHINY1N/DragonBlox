@@ -14,6 +14,7 @@ local BVegetaCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCMain7_Veg
 local GokuBCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCMain8_BlackKarrotArea.HumanoidRootPart.CFrame
 local BrolyCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCMain9_BrawlyArea.HumanoidRootPart.CFrame
 local SpawnCF = game:GetService("Workspace").Misc.SpawnTP.CFrame
+local TimeCF = game:GetService("Workspace")["World Map"]["Multiplier Zones"]["Time Chamber"].Main["Time Chamber"]:GetChildren()[6]["Time Chamber (Final)_Cylinder.010"].CFrame
 
 
 
@@ -176,6 +177,15 @@ Tab:AddButton({
     local char = Player.Character
     local Humrootpart = char.HumanoidRootPart
       		Humrootpart.CFrame = SpawnCF
+  	end    
+})
+Tab:AddButton({
+	Name = "Time Chamber (50K+ Strength)",
+	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
+    local Humrootpart = char.HumanoidRootPart
+      		Humrootpart.CFrame = TimeCF
   	end    
 })
 local Tab = Window:MakeTab({
