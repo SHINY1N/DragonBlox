@@ -189,24 +189,6 @@ Tab:AddButton({
       		Humrootpart.CFrame = TimeCF
   	end    
 })
-Tab:AddButton({
-	Name = "Capsule (500K+ Strength)",
-	Callback = function()
-    local Player = game.Players.LocalPlayer
-    local char = Player.Character
-    local Humrootpart = char.HumanoidRootPart
-      		Humrootpart.CFrame = CapsuleCF
-  	end    
-})
-Tab:AddButton({
-	Name = "Korin Tower (5M+ Strength)",
-	Callback = function()
-    local Player = game.Players.LocalPlayer
-    local char = Player.Character
-    local Humrootpart = char.HumanoidRootPart
-      		Humrootpart.CFrame = TowerCF
-  	end    
-})
 local Tab = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://4483345998",
