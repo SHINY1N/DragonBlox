@@ -15,6 +15,7 @@ local GokuBCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCMain8_Black
 local BrolyCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCMain9_BrawlyArea.HumanoidRootPart.CFrame
 local SpawnCF = game:GetService("Workspace").Misc.SpawnTP.CFrame
 local TimeCF = game:GetService("Workspace")["World Map"]["Multiplier Zones"]["Time Chamber"].Main["Time Chamber"]:GetChildren()[6]["Time Chamber (Final)_Cylinder.010"].CFrame
+local CapsuleCF = game:GetService("Workspace")["World Map"]["Multiplier Zones"]["Capsule Ship"].Main["Capsule Ship"]["Capsule Ship_Circle"].CFrame
 local TowerCF = game:GetService("Workspace")["World Map"]["Multiplier Zones"]["Korin's Tower"].Main.Tower["Korin's Tower_Sphere.002 (1)"].CFrame
 
 
@@ -189,7 +190,16 @@ Tab:AddButton({
   	end    
 })
 Tab:AddButton({
-	Name = "Korin Tower (500K+ Strength)",
+	Name = "Capsule (500K+ Strength)",
+	Callback = function()
+    local Player = game.Players.LocalPlayer
+    local char = Player.Character
+    local Humrootpart = char.HumanoidRootPart
+      		Humrootpart.CFrame = CapsuleCF
+  	end    
+})
+Tab:AddButton({
+	Name = "Korin Tower (5M+ Strength)",
 	Callback = function()
     local Player = game.Players.LocalPlayer
     local char = Player.Character
