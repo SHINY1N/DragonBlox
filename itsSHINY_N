@@ -18,20 +18,15 @@ local TimeCF = game:GetService("Workspace")["World Map"]["Multiplier Zones"]["Ti
 local CapsuleCF = game:GetService("Workspace")["World Map"]["Multiplier Zones"]["Capsule Ship"].Main["Capsule Ship"]["Capsule Ship_Circle"].CFrame
 local TowerCF = game:GetService("Workspace")["World Map"]["Multiplier Zones"]["Korin's Tower"].Main.Tower["Korin's Tower_Sphere.002 (1)"].CFrame
 
+--Bool Values
+_G.AutoClick = false
+_G.AutoTechnique = false
+_G.AutoRebirth = false
 
-local Tab = Window:MakeTab({
-	Name = "AutoFarm",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-local Section = Tab:AddSection({
-	Name = "Autofam Stuff (Rejoin to Undo)"
-})
-Tab:AddButton({
-	Name = "Auto Click (Fast)",
-	Callback = function()
-      		while wait() do
-           local args = {
+--functions
+function autoclick()
+while _G.AutoClick == true do wait()
+local args = {
     [1] = {
         ["Camera"] = CFrame.new(7127.94629, 767.564453, -10080.8477, 0.694443047, -0.578470528, 0.427926153, -1.49011612e-08, 0.594715476, 0.803936243, -0.719547749, -0.558287919, 0.412995994),
         ["SkillId"] = "1",
@@ -42,25 +37,14 @@ Tab:AddButton({
     }
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SkillRemote"):FireServer(unpack(args))      
-  	end
-      end
-})
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SkillRemote"):FireServer(unpack(args))
 
-Tab:AddButton({
-	Name = "Auto Rebirth",
-	Callback = function()
-      		while wait(1) do
-                  game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("StatsService"):WaitForChild("RE"):WaitForChild("RebirthUp"):FireServer()
-  	end
-      end    
-})
+end
+end
 
-Tab:AddButton({
-	Name = "Auto Kaioken",
-	Callback = function()
-    while wait(1) do
-      		local args = {
+function autokaioken()
+while _G.AutoTechnique == true do wait()
+local args = {
     [1] = {
         ["Camera"] = CFrame.new(7162.78076, 577.245361, -10076.1436, 0.978101611, -0.0278607626, 0.206254631, 1.86264471e-09, 0.990999818, 0.133863702, -0.208127826, -0.130932301, 0.969298542),
         ["SkillId"] = "8",
@@ -72,9 +56,48 @@ Tab:AddButton({
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SkillRemote"):FireServer(unpack(args))
-  	end
-      end    
+end
+end
+
+function autorebirth()
+while _G.AutoRebirth == true do wait()
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("StatsService"):WaitForChild("RE"):WaitForChild("RebirthUp"):FireServer()
+end
+end
+
+local Tab = Window:MakeTab({
+	Name = "AutoFarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
+local Section = Tab:AddSection({
+	Name = "Autofam Stuff (Rejoin to Undo)"
+})
+Tab:AddToggle({
+	Name = "AutoClick (Fast)",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoClick = Value
+        autoclick()
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoRebirth = Value
+        autorebirth()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Kaioken/Technique",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoTechnique = Value
+        autokaioken()
+	end    
+})    
 
 Tab:AddButton({
 	Name = "Anti Afk",
@@ -227,19 +250,15 @@ local JanembaCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCCrimson4.
 local ElManoCF = game:GetService("Workspace").Misc.NPC.Quests.QuestNPCCrimson5.HumanoidRootPart.CFrame
 local spawn2CF = game:GetService("Workspace").Misc.SpawnTP.CFrame
 
-local Tab = Window:MakeTab({
-	Name = "AutoFarm",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-local Section = Tab:AddSection({
-	Name = "Autofam Stuff (Rejoin to Undo)"
-})
-Tab:AddButton({
-	Name = "Auto Click (Fast)",
-	Callback = function()
-      		while wait() do
-           local args = {
+--Bool Values
+_G.AutoClick = false
+_G.AutoTechnique = false
+_G.AutoRebirth = false
+
+--functions
+function autoclick()
+while _G.AutoClick == true do wait()
+local args = {
     [1] = {
         ["Camera"] = CFrame.new(7127.94629, 767.564453, -10080.8477, 0.694443047, -0.578470528, 0.427926153, -1.49011612e-08, 0.594715476, 0.803936243, -0.719547749, -0.558287919, 0.412995994),
         ["SkillId"] = "1",
@@ -250,25 +269,14 @@ Tab:AddButton({
     }
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SkillRemote"):FireServer(unpack(args))      
-  	end
-      end
-})
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SkillRemote"):FireServer(unpack(args))
 
-Tab:AddButton({
-	Name = "Auto Rebirth",
-	Callback = function()
-      		while wait(1) do
-                  game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("StatsService"):WaitForChild("RE"):WaitForChild("RebirthUp"):FireServer()
-  	end
-      end    
-})
+end
+end
 
-Tab:AddButton({
-	Name = "Auto Kaioken",
-	Callback = function()
-    while wait(1) do
-      		local args = {
+function autokaioken()
+while _G.AutoTechnique == true do wait()
+local args = {
     [1] = {
         ["Camera"] = CFrame.new(7162.78076, 577.245361, -10076.1436, 0.978101611, -0.0278607626, 0.206254631, 1.86264471e-09, 0.990999818, 0.133863702, -0.208127826, -0.130932301, 0.969298542),
         ["SkillId"] = "8",
@@ -280,8 +288,47 @@ Tab:AddButton({
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SkillRemote"):FireServer(unpack(args))
-  	end
-      end    
+end
+end
+
+function autorebirth()
+while _G.AutoRebirth == true do wait()
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("StatsService"):WaitForChild("RE"):WaitForChild("RebirthUp"):FireServer()
+end
+end
+
+local Tab = Window:MakeTab({
+	Name = "AutoFarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Autofam Stuff (Rejoin to Undo)"
+})
+Tab:AddToggle({
+	Name = "AutoClick (Fast)",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoClick = Value
+        autoclick()
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoRebirth = Value
+        autorebirth()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Kaioken/Technique",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoTechnique = Value
+        autokaioken()
+	end    
 })
 
 Tab:AddButton({
@@ -379,19 +426,15 @@ local BrolyX01CF = game:GetService("Workspace").Misc.NPC.Quest.QuestNPCDroid3_Br
 local JirenXCF = game:GetService("Workspace").Misc.NPC.Quest.QuestNPCDroid4_JigrayX.HumanoidRootPart.CFrame
 local spawn3CF = game:GetService("Workspace").Misc.SpawnTP.CFrame
 
-local Tab = Window:MakeTab({
-	Name = "AutoFarm",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-local Section = Tab:AddSection({
-	Name = "Autofam Stuff (Rejoin to Undo)"
-})
-Tab:AddButton({
-	Name = "Auto Click (Fast)",
-	Callback = function()
-      		while wait() do
-           local args = {
+--Bool Values
+_G.AutoClick = false
+_G.AutoTechnique = false
+_G.AutoRebirth = false
+
+--functions
+function autoclick()
+while _G.AutoClick == true do wait()
+local args = {
     [1] = {
         ["Camera"] = CFrame.new(7127.94629, 767.564453, -10080.8477, 0.694443047, -0.578470528, 0.427926153, -1.49011612e-08, 0.594715476, 0.803936243, -0.719547749, -0.558287919, 0.412995994),
         ["SkillId"] = "1",
@@ -402,25 +445,14 @@ Tab:AddButton({
     }
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SkillRemote"):FireServer(unpack(args))      
-  	end
-      end
-})
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SkillRemote"):FireServer(unpack(args))
 
-Tab:AddButton({
-	Name = "Auto Rebirth",
-	Callback = function()
-      		while wait(1) do
-                  game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("StatsService"):WaitForChild("RE"):WaitForChild("RebirthUp"):FireServer()
-  	end
-      end    
-})
+end
+end
 
-Tab:AddButton({
-	Name = "Auto Kaioken",
-	Callback = function()
-    while wait(1) do
-      		local args = {
+function autokaioken()
+while _G.AutoTechnique == true do wait()
+local args = {
     [1] = {
         ["Camera"] = CFrame.new(7162.78076, 577.245361, -10076.1436, 0.978101611, -0.0278607626, 0.206254631, 1.86264471e-09, 0.990999818, 0.133863702, -0.208127826, -0.130932301, 0.969298542),
         ["SkillId"] = "8",
@@ -432,8 +464,47 @@ Tab:AddButton({
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SkillRemote"):FireServer(unpack(args))
-  	end
-      end    
+end
+end
+
+function autorebirth()
+while _G.AutoRebirth == true do wait()
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.4.7"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("StatsService"):WaitForChild("RE"):WaitForChild("RebirthUp"):FireServer()
+end
+end
+
+local Tab = Window:MakeTab({
+	Name = "AutoFarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Autofam Stuff (Rejoin to Undo)"
+})
+Tab:AddToggle({
+	Name = "AutoClick (Fast)",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoClick = Value
+        autoclick()
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoRebirth = Value
+        autorebirth()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Kaioken/Technique",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoTechnique = Value
+        autokaioken()
+	end    
 })
 
 Tab:AddButton({
